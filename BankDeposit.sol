@@ -27,7 +27,7 @@ contract BankDeposit {
     }
 
     function virtualWithdraw(uint _amt) public onlyChild() returns (string memory) {
-        require(account >= _amt+50 ether, "Insufficient Balance/Minimum balance 50 required");
+        require(account >= _amt+50 ether, "Insufficient Balance/Minimum balance 50 ether required");
         account -= _amt;
         return "Withdrawal Successful";
     }
